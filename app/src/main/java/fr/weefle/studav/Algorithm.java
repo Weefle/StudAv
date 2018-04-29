@@ -9,6 +9,13 @@ public class Algorithm {
     public List<String> eleves = new ArrayList<>();
     public List<Eleve> elevesob = new ArrayList<>();
     public Eleve eleve;
+    private static Algorithm instance;
+    public static Algorithm get(){
+        if(instance == null){
+            instance = new Algorithm();
+        }
+        return instance;
+    }
 
     public void addEleve(String player, Double note, int coeff){
         if(!eleves.contains(player)) {
@@ -23,9 +30,9 @@ public class Algorithm {
         }
     }
 
-    public void removeEleve(String eleve){
-        elevesob.remove(eleve);
-        eleves.remove(eleve);
+    public void removeEleve(int pos){
+        elevesob.remove(pos);
+        eleves.remove(pos);
     }
 
     public Double calcul(Eleve eleve){

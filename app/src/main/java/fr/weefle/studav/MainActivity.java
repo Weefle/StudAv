@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Algorithm algo = new Algorithm();
+    private Algorithm algo = Algorithm.get();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         /*algo.addEleve("Benoit", 15.0, 5);
         algo.addEleve("Constance", 14.0, 4);
-        algo.addEleve("Constance", 15.0, 4);*/
+        algo.addEleve("Constance", 15.0, 4);
+        algo.removeEleve("Constance");*/
         ListView shopListView = findViewById(R.id.shop_list_view);
         shopListView.setAdapter(new EleveAdapter(this, algo.elevesob));
 

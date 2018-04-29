@@ -15,7 +15,7 @@ public class EleveAdapter extends BaseAdapter {
     private Context context;
     private List<Eleve> elevelist;
     private LayoutInflater inflater;
-    private Algorithm algo = new Algorithm();
+    private Algorithm algo = Algorithm.get();
 
     public EleveAdapter(Context context, List<Eleve> elevelist){
         this.context = context;

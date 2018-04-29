@@ -5,13 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
 
     private Button button3;
     private Button button2;
     private Button button;
-    private Algorithm algo = new Algorithm();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +30,13 @@ public class InfoActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                algo.removeEleve("Benoit");
+                Algorithm.get().removeEleve(0);
             }
         });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                algo.addEleve("Benoit", 15.0, 5);
+                Algorithm.get().addEleve("Benoit", 15.0, 5);
             }
         });
     }
