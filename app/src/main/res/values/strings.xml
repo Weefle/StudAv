@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StudAv</string>
+    <string name="item_default_name">StudAv</string>
+    <string name="item_default_price">StudAv</string>
+    <string name="button1">Ajouter élève</string>
+    <string name="button2">Supprimer élève</string>
+    <string name="button3">Liste des élèves</string>
+</resources>
