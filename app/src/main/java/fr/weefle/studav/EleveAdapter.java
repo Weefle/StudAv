@@ -44,10 +44,13 @@ public class EleveAdapter extends BaseAdapter {
         final Eleve currentEleve = (Eleve) getItem(position);
         final String itemName = currentEleve.getName();
         final List<Double> itemNotes = currentEleve.getNotes();
+        final List<Integer> itemCoeffs = currentEleve.getCoeffs();
         TextView itemNameView = convertView.findViewById(R.id.item_name);
-        itemNameView.setText(itemName);
+        itemNameView.setText("Nom: " + itemName);
         TextView itemPriceView = convertView.findViewById(R.id.item_price);
-        itemPriceView.setText(itemNotes.toString());
+        itemPriceView.setText("Notes: " + itemNotes.toString());
+        TextView itemCoeffsView = convertView.findViewById(R.id.item_coeffs);
+        itemCoeffsView.setText("Coefficients: " + itemCoeffs.toString());
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

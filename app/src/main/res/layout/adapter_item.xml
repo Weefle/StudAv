@@ -29,6 +29,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/item_name"/>
 
+        <TextView
+            android:text="@string/item_default_coeffs"
+            android:id="@+id/item_coeffs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_price"/>
+
     </RelativeLayout>
 
 
