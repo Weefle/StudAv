@@ -46,7 +46,7 @@ public class EleveAdapter extends BaseAdapter {
         final List<Double> itemNotes = currentEleve.getNotes();
         final List<Integer> itemCoeffs = currentEleve.getCoeffs();
         TextView itemNameView = convertView.findViewById(R.id.item_name);
-        itemNameView.setText("Nom: " + itemName);
+        itemNameView.setText(itemName);
         TextView itemPriceView = convertView.findViewById(R.id.item_price);
         itemPriceView.setText("Notes: " + itemNotes.toString());
         TextView itemCoeffsView = convertView.findViewById(R.id.item_coeffs);
