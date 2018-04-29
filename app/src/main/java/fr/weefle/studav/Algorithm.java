@@ -1,6 +1,7 @@
 package fr.weefle.studav;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Algorithm {
@@ -8,6 +9,7 @@ public class Algorithm {
     //ici l'algorithme principal
     public List<String> eleves = new ArrayList<>();
     public List<Eleve> elevesob = new ArrayList<>();
+    public HashMap<Integer, Eleve> list = new HashMap<>();
     public Eleve eleve;
     private static Algorithm instance;
     public static Algorithm get(){
@@ -30,9 +32,9 @@ public class Algorithm {
         }
     }
 
-    public void removeEleve(int pos){
-        elevesob.remove(pos);
-        eleves.remove(pos);
+    public void removeAll(){
+        elevesob.removeAll(elevesob);
+        eleves.removeAll(eleves);
     }
 
     public Double calcul(Eleve eleve){
